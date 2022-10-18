@@ -22,6 +22,9 @@ class Articulo(models.Model):
     titulo = models.CharField(max_length=30)
     texto = models.CharField(max_length=1000)
     fecha = models.DateField(null=True)
+    
+    def __str__(self):
+        return self.titulo
 
 
 class Seccion(models.Model):
@@ -30,3 +33,6 @@ class Seccion(models.Model):
         verbose_name_plural = "Secciones"
         
     nombre = models.CharField(max_length=30)
+    
+    def __str__(self):
+        return self.nombre
